@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <script src="main.js" defer></script>
+    <title>BLOXD</title>
+</head>
+<body class="bg-black text-white max-w-6xl mx-auto px-8 py-4">
+    <h1 class="text-5xl font-semibold text-center mt-10 bg-linear-to-l from-blue-500 via-teal-500 to-green-500 text-transparent bg-clip-text bg-size-[300%_300%] heading">Welcome to BLOXD</h1>
+    <h2 class="text-2xl font-medium mt-8 py-2 underline decoration-dashed underline-offset-4 subheading">Write a blog post</h2>
+    <p class="text-lg font-normal leading-relaxed text-white/60 underline decoration-dashed underline-offset-4 syntax">Write your blog with this syntax - head: content, subh: content, para: your paragraph content</p>
+    <div class="relative flex flex-col w-full mt-4">
+        <span class="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-[#fefefe]"></span>
+        <span class="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-[#fefefe]"></span>
+        <span class="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-[#fefefe]"></span>
+        <span class="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-[#fefefe]"></span>
+        <textarea rows="20" class="w-full px-5 py-3 bg-neutral-800 text-white/80 placeholder:italic placeholder:font-medium focus:outline-none resize-none" placeholder="Write your blog post here..." id="text-area"></textarea>
+    </div>
+
+    <button class="bg-[#212121] border-none no-underline mt-4" id="btn">
+        <a href="#" class="relative inline-block py-3.75 px-7.5 border-2 border-solid border-[#fefefe] uppercase text-[#fefefe] no-underline text-[18px] font-semibold before:content-[''] before:absolute before:top-1.5 before:-left-0.5 before:w-[calc(100%+4px)] before:h-[calc(100%-12px)] before:bg-[#212121] before:duration-300 before:ease-in-out before:scale-y-100 hover:before:scale-y-0 after:content-[''] after:absolute after:left-1.5 after:-top-0.5 after:h-[calc(100%+4px)] after:w-[calc(100%-12px)] after:bg-[#212121] after:duration-300 after:ease-in-out after:scale-x-100 delay-500 hover:after:scale-x-0"><span class="relative z-3">Preview Blog</span></a>
+    </button>
+
+    <div class="relative flex flex-col gap-4 w-full p-5 bg-neutral-800 text-white/80 mt-20" id="output">
+        <span class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#fefefe]"></span>
+        <span class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#fefefe]"></span>
+        <span class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#fefefe]"></span>
+        <span class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#fefefe]"></span>
+        <p id="preview" class="text-center text-[26px] font-semibold">Currently No Blog Previews</p>
+    </div>
+</body>
+</html>
