@@ -2,7 +2,6 @@ const textArea = document.getElementById("text-area");
 const btn = document.getElementById("btn");
 const outputDiv = document.getElementById("output");
 const preview = document.getElementById("preview");
-const output = document.createElement("div");
 
 
 function validateTextInp(textInpStr) {
@@ -97,7 +96,9 @@ btn.addEventListener("click", () => {
 
     preview.textContent = "My Blog Preview";
 
-    output.innerHTML = "";
+    outputDiv.innerHTML = "";
+
+    const output = document.createElement("div");
 
     const textAreaValue = sanitizeTextAreaValue();
 
