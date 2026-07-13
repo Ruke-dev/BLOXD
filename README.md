@@ -10,8 +10,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Font Awesome](https://img.shields.io/badge/Font_Awesome_v7-528DD7?style=flat-square&logo=fontawesome&logoColor=white)
 
-[Live Demo](https://bloxd-lime.vercel.app/) · [Report Bug](https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail/&service=mail&ec=GBRAFw) · [Request Feature](https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail/&service=mail&ec=GBRAFw)
-
+[Live Demo](https://bloxd-lime.vercel.app/) · [Report Bug](https://github.com/Ruke-dev/BLOXD/issues) · [Request Feature](https://github.com/Ruke-dev/BLOXD/issues)
 </div>
 
 ---
