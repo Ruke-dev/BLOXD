@@ -5,8 +5,18 @@ const preview = document.getElementById("preview");
 
 
 function validateTextInp(textInpStr) {
-    const textRegexp = /^(head|subh|para):\s*((?:[a-z][\w-]*\s*)*)(?::\s*)?(.+)$/i;
-    return textRegexp.exec(textInpStr);
+    // Pattern 1 — has classes (second colon present)
+    const withClasses = /^(head|subh|para):\s*([^:]+):\s*(.+)$/i;
+    // Pattern 2 — no classes (no second colon)
+    const withoutClasses = /^(head|subh|para):\s*(.+)$/i;
+
+    const match1 = withClasses.exec(textInpStr);
+    if (match1) return { tag: match1[1], classes: match1[2].trim().split(/\s+/).filter(Boolean), content: match1[3].trim() };
+
+    const match2 = withoutClasses.exec(textInpStr);
+    if (match2) return { tag: match2[1], classes: [], content: match2[2].trim() };
+
+    return null;
 }
 
 
@@ -32,13 +42,7 @@ function sanitizeTextAreaValue() {
 function parseInpStrToObj(inputStr) {
 
     // head: content, subh: content, para: content
-    let separatedArr = '';
-
-    if(inputStr.includes(",")){
-        separatedArr = inputStr.split(",");
-    }else if (inputStr.includes("\n")) {
-        separatedArr = inputStr.split("\n");
-    }
+    const separatedArr = inputStr.split(/\r?\n|,(?=\s*(?:head|subh|para)\s*:)/i).filter(e => e && e.trim() !== "");
 
     const outputArr = [];
 
@@ -49,14 +53,14 @@ function parseInpStrToObj(inputStr) {
         if(cleanStr){
             
             outputArr.push({
-                tag: cleanStr[1] ? cleanStr[1].trim() : "",
-                classes: cleanStr[2] ? cleanStr[2].trim().split(/\s+/).filter(Boolean) : [],
-                content: cleanStr[3] ? cleanStr[3].trim(): ""
+                tag: cleanStr.tag.toLowerCase(),
+                classes: cleanStr.classes,
+                content: cleanStr.content
             })
         }else{
             outputArr.push({
                 tag: "error",
-                content: `⚠️ Invalid syntax on line ${cleanStr}`
+                content: `⚠️ Invalid syntax: ${e.trim()}`
             });
         }
     })
