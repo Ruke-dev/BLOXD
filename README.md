@@ -10,7 +10,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Font Awesome](https://img.shields.io/badge/Font_Awesome_v7-528DD7?style=flat-square&logo=fontawesome&logoColor=white)
 
-[Live Demo](#) · [Report Bug](rukedev01@gmail.com) · [Request Feature](rukedev01@gmail.com)
+[Live Demo](https://bloxd-lime.vercel.app/) · [Report Bug](rukedev01@gmail.com) · [Request Feature](rukedev01@gmail.com)
 
 </div>
 
