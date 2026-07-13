@@ -100,11 +100,11 @@ btn.addEventListener("click", () => {
 
     preview.textContent = "My Blog Preview";
 
-    outputDiv.innerHTML = "";
-
     const output = document.createElement("div");
 
     const textAreaValue = sanitizeTextAreaValue();
+
+    if(!textAreaValue) return;
 
     const outputObj = parseInpStrToObj(textAreaValue);
 
@@ -139,5 +139,5 @@ btn.addEventListener("click", () => {
         });
     });
 
-    outputDiv.appendChild(output);
+    outputDiv.replaceChildren(preview, output);
 })
